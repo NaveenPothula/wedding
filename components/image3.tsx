@@ -6,7 +6,7 @@ const ImageComponent = () => {
   return (
     <div className="flex justify-center items-center p-4">
       <Image
-        src="https://via.placeholder.com/800x400?text=Sample+Image"
+        src="/image6.png"
         alt="Sample"
         layout="intrinsic"
         width={800}

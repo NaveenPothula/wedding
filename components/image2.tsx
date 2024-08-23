@@ -7,7 +7,7 @@ const ImageComponent = () => {
     <div className="flex justify-center items-center p-4">
       <div className="relative w-80 h-80">
         <Image
-          src="https://via.placeholder.com/800x800?text=Sample+Image"
+          src="/image5.png"
           alt="Sample"
           layout="fill"
           objectFit="cover"

@@ -1,16 +1,14 @@
-// components/ImageCarousel.js
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const images = [
-  "https://via.placeholder.com/800x400?text=Image+1",
-  "https://via.placeholder.com/800x400?text=Image+2",
-  "https://via.placeholder.com/800x400?text=Image+3",
-];
+const images = ["/image1.png", "/image2.png", "/image3.png"];
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -22,8 +20,38 @@ const ImageCarousel = () => {
     );
   };
 
+  // Swipe threshold in pixels to trigger slide change
+  const swipeThreshold = 50;
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > swipeThreshold) {
+      nextSlide();
+    }
+
+    if (touchEndX - touchStartX > swipeThreshold) {
+      prevSlide();
+    }
+
+    // Reset touch positions
+    setTouchStartX(0);
+    setTouchEndX(0);
+  };
+
   return (
-    <div className="relative w-full overflow-hidden h-60h w-60w">
+    <div
+      className="relative w-full overflow-hidden h-60h w-60w"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div
         className="flex transition-transform duration-300 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -40,18 +68,6 @@ const ImageCarousel = () => {
           </div>
         ))}
       </div>
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-      >
-        &#10094;
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-      >
-        &#10095;
-      </button>
     </div>
   );
 };
