@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative w-full h-[40vh] md:h-[70vh] bg-cover bg-center py-0 mb-4"
-      style={{ backgroundImage: 'url("/start.jpg")' }}
+      style={{ backgroundImage: 'url("/start.png")' }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-start items-center">
         <div className="text-center px-4 mt-4 md:mt-20">
