@@ -1,20 +1,21 @@
-// components/ImageComponent.js
-
 import Image from "next/image";
 
-const ImageComponent = () => {
+export default function HeroSection() {
   return (
-    <div className="flex justify-center items-center p-4">
-      <Image
-        src="/image6.png"
-        alt="Sample"
-        layout="intrinsic"
-        width={800}
-        height={400}
-        className="rounded shadow-lg"
-      />
-    </div>
+    <section
+      className="relative w-full h-[40vh] md:h-[70vh] bg-cover bg-center py-0 mb-4"
+      style={{ backgroundImage: 'url("/start.jpg")' }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-start items-center">
+        <div className="text-center px-4 mt-4 md:mt-20">
+          <h1 className="text-orange-500 text-sm md:text-4xl font-bold leading-tight font-roboto italic">
+            Celebrating 25 years of togetherness
+          </h1>
+          <h1 className="text-pink-500 text-xl md:text-4xl font-bold leading-tight">
+            Nagesh and Jaya
+          </h1>
+        </div>
+      </div>
+    </section>
   );
-};
-
-export default ImageComponent;
+}

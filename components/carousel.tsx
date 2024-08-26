@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const images: string[] = ["/image1.png", "/image2.png", "/image3.png"];
+const images: string[] = ["/marriage1.jpeg", "/marriage2.jpeg"];
 
 const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -46,7 +46,7 @@ const ImageCarousel: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden h-60h w-60w">
+    <div className="relative w-full overflow-hidden h-70h w-60w">
       <div
         className="flex transition-transform duration-300 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -61,7 +61,7 @@ const ImageCarousel: React.FC = () => {
               alt={`Slide ${index}`}
               className="w-full h-auto"
               width={200}
-              height={100}
+              height={150}
             />
           </div>
         ))}
