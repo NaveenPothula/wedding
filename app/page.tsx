@@ -7,12 +7,14 @@ import Image4 from "@/components/image4";
 import Text2 from "@/components/text2";
 import Information from "@/components/information";
 import Imgage5 from "@/components/image5";
+import Rounded from "@/components/rounded";
 
 export default function Page() {
   return (
     <>
       <Image3 />
       <Carousel />
+      <Rounded />
       <Text1 />
       <Image4 />
       <Text2 />
