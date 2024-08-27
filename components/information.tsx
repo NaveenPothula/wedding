@@ -32,8 +32,8 @@ export default function SaveTheDate() {
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[40vh] bg-gray-100 p-6 text-center">
-      <h1 className="text-4xl font-bold text-black mb-4">Save the Date</h1>
+    <div className="flex flex-col items-center justify-center h-[40vh] p-6 text-center">
+      <h1 className="text-xl text-black mb-4">Save the Date</h1>
       <p className="text-xl mb-6 text-black">
         1st September, 2024, 6:00 PM onwards
       </p>

@@ -11,7 +11,7 @@ export default function HeroSection() {
           <h1 className="text-white text-sm md:text-4xl font-bold leading-tight font-roboto italic">
             Celebrating 25 years of togetherness
           </h1>
-          <h1 className="text-orange-500 text-xl md:text-4xl font-bold leading-tight">
+          <h1 className="text-black text-2xl md:text-4xl font-bold leading-tight">
             Nagesh and Jaya
           </h1>
         </div>

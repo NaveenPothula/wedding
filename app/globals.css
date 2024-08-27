@@ -24,8 +24,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  background: gray;
+  background: rgb(160, 125, 125);
 }
+
+/* Ensure headings and other text elements use the same font */
 
 @layer utilities {
   .text-balance {

@@ -46,7 +46,7 @@ const ImageCarousel: React.FC = () => {
   };
 
   return (
-    <div className="relative w-6/7 overflow-hidden h-70h w-60w py-1 bg-white-500">
+    <div className="relative w-6/7 overflow-hidden h-70h w-60w py-1">
       <div
         className="flex transition-transform duration-300 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}

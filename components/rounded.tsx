@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const MobileResponsiveComponent = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-4 bg-gray-500 px-0">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-4 px-0">
       {/* First image and name side by side */}
       <div className="flex items-center gap-4 px-0">
         <Image

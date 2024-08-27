@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Dancing_Script } from "@next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Nagesh And Jaya Silver Jubliee",
@@ -16,8 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="bg-gray-500 py-0">{children}</div>
+      <head></head>
+      <body className={dancingScript.className}>
+        <div className=" py-0">{children}</div>
       </body>
     </html>
   );
