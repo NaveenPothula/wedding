@@ -19,7 +19,7 @@ const MobileResponsiveComponent = () => {
       </div>
 
       {/* Second image and name side by side */}
-      <div className="flex items-center gap-4 mt-20">
+      <div className="flex items-center gap-4 md:mt-20">
         <p className="text-xl font-semibold text-white italic">Jaya</p>
         <Image
           src="/jaya.png" // Replace with your image path
