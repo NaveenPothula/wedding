@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section
-      className="relative w-full h-[100vh] md:h-[70vh] bg-cover bg-center py-0"
+      className="relative w-full h-[100vh] md:h-[100vh] bg-cover md:bg-fit bg-center py-0"
       style={{ backgroundImage: 'url("/start.png")' }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-start items-center">
