@@ -1,17 +1,22 @@
-// components/VideoPlayer.tsx
 import React from "react";
 
 const VideoPlayer: React.FC = () => {
   return (
     <div className="flex justify-center items-center p-2 max-w-2xl mx-auto bg-white rounded-xl shadow-md">
-      <video
-        className="w-full h-auto rounded-lg"
-        controls
-        poster="/thumbnail.jpeg"
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ paddingTop: "56.25%" }}
       >
-        <source src="/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <iframe
+          className="absolute top-0 left-0 w-full h-full rounded-lg"
+          src="https://www.youtube.com/embed/4MSEFae0Y_U?si=k-E5NSaFkHwM1QSV"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 };
