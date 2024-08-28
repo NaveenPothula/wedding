@@ -6,11 +6,11 @@ import { FaMapMarkedAlt } from "react-icons/fa";
 const Map = () => {
   return (
     <div className="px-2 py-0 md:px-20">
-      <h2 className="text-2xl font-bold mb-4 text-white">
+      <h2 className="text-2xl font-bold mb-4 text-black">
         Bless our parents with your presence and warm wishes
       </h2>
-      <p className="text-white mb-4">
-        <span className="font-bold text-white">Venue: </span>
+      <p className="text-black mb-4 font-semibold">
+        <span className="font-bold text-black">Venue: </span>
         Bommana Ramachandra Kalyana Manadapam. Rajahmundry, Andhra Pradesh,
         Pincode-533101
       </p>

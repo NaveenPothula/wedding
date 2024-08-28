@@ -24,7 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  background: rgb(160, 125, 125);
+  background: rgb(249, 247, 247);
 }
 
 /* Ensure headings and other text elements use the same font */

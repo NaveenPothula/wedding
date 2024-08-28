@@ -8,16 +8,19 @@ import Text2 from "@/components/text2";
 import Information from "@/components/information";
 import Imgage5 from "@/components/image5";
 import Rounded from "@/components/rounded";
+import VideoPlayer from "@/components/video";
 
 export default function Page() {
   return (
     <>
       <Image3 />
+      <Text1 />
       <Carousel />
       <Rounded />
-      <Text1 />
+
       <Image4 />
       <Text2 />
+      <VideoPlayer />
       <Information />
       <Imgage5 />
 

@@ -32,13 +32,13 @@ export default function SaveTheDate() {
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[40vh] p-6 text-center">
-      <h1 className="text-xl text-black mb-4">Save the Date</h1>
-      <p className="text-xl mb-6 text-black">
+    <div className="flex flex-col items-center justify-center h-auto px-2 py-6 text-center">
+      <h1 className="text-xl text-black mb-4 font-bold">Save the Date</h1>
+      <p className="text-xl mb-6 text-black font-bold">
         1st September, 2024, 6:00 PM onwards
       </p>
 
-      <div className="text-xl font-semibold text-black">
+      <div className="text-xl font-bold text-black">
         <div>
           {days} days : {hours} hours : {minutes} minutes : {seconds} seconds
         </div>
