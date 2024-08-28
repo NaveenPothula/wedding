@@ -7,9 +7,11 @@ export default function Imgage5() {
         <Image
           src="/family.png" // Update with your image path
           alt="Descriptive Alt Text"
-          layout="fill"
+          // layout="fill"
+          height={150}
+          width={200}
           // objectFit="cover"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg h-full w-full"
         />
       </div>
     </div>

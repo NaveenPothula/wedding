@@ -38,7 +38,7 @@ export default function SaveTheDate() {
         1st September, 2024, 6:00 PM onwards
       </p>
 
-      <div className="text-2xl font-semibold text-black">
+      <div className="text-xl font-semibold text-black">
         <div>
           {days} days : {hours} hours : {minutes} minutes : {seconds} seconds
         </div>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const images: string[] = ["/shoot1.png", "/shoot2.png", "/shoot3.png"];
+const images: string[] = ["/shoot1.jpg", "/shoot2.jpg", "/shoot3.png"];
 
 const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -55,11 +55,11 @@ const ImageCarousel: React.FC = () => {
         onTouchEnd={handleTouchEnd}
       >
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0 px-1">
+          <div key={index} className="w-full flex-shrink-0 px-1/bg-cover">
             <Image
               src={image}
               alt={`Slide ${index}`}
-              objectFit="cover"
+              // objectFit="cover"
               className="w-full h-full"
               width={200}
               height={150}

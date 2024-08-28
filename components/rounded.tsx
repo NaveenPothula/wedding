@@ -9,20 +9,20 @@ const MobileResponsiveComponent = () => {
       {/* First image and name side by side */}
       <div className="flex items-center gap-4 px-0">
         <Image
-          src="/nagesh.png" // Replace with your image path
+          src="/nagesh.jpg" // Replace with your image path
           alt="First Person"
           width={160} // Set the width
           height={160} // Set the height
-          className="rounded-full object-cover"
+          className="rounded-full object-cover mr-8"
         />
-        <p className="text-lg font-semibold text-white italic">Nagesh</p>
+        <p className="text-2xl font-semibold text-white">Nagesh</p>
       </div>
 
       {/* Second image and name side by side */}
       <div className="flex items-center gap-4 md:mt-20">
-        <p className="text-xl font-semibold text-white italic">Jaya</p>
+        <p className="text-2xl font-semibold text-white mr-8">Jaya</p>
         <Image
-          src="/jaya.png" // Replace with your image path
+          src="/jaya.jpg" // Replace with your image path
           alt="Second Person"
           width={160} // Set the width
           height={160} // Set the height

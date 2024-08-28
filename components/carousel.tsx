@@ -55,11 +55,11 @@ const ImageCarousel: React.FC = () => {
         onTouchEnd={handleTouchEnd}
       >
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0 px-1">
+          <div key={index} className="w-full flex-shrink-0 px-1 bg-contain">
             <Image
               src={image}
               alt={`Slide ${index}`}
-              objectFit="contain"
+              // objectFit="contain"
               className="w-full h-auto"
               width={200}
               height={150}

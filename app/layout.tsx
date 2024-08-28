@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
-import { Dancing_Script } from "@next/font/google";
+import { Dancing_Script } from "next/font/google";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body className={dancingScript.className}>
-        <div className=" py-0">{children}</div>
+        <div className="py-0">{children}</div>
       </body>
     </html>
   );
