@@ -7,13 +7,28 @@ export default function SaveTheDate() {
 
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
   const [isClient, setIsClient] = useState(false);
+  console.log(timeLeft);
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   useEffect(() => {
     // Set the client-side rendering flag to true
     setIsClient(true);
 
     const interval = setInterval(() => {
-      setTimeLeft(targetDate - Date.now());
+      if (timeLeft < 0) {
+        setTimeLeft(0);
+      } else {
+        setTimeLeft(targetDate - Date.now());
+      }
+      if (days && hours && minutes && seconds <= 0) {
+        clearInterval(interval);
+      }
     }, 1000);
 
     return () => clearInterval(interval);
@@ -23,13 +38,6 @@ export default function SaveTheDate() {
     // Render a placeholder or static content on the server
     return null;
   }
-
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   return (
     <div className="flex flex-col items-center justify-center h-auto px-2 py-6 text-center">
